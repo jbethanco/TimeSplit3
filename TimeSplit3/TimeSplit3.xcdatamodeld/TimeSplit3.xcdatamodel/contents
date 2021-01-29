@@ -1,4 +1,54 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CrewLine" representedClassName="CrewLine" syncable="YES" codeGenerationType="class">
+        <attribute name="combatSortie" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="combatSupportSortie" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="combatSupportTime" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="combatTime" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="evaluator" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="flightAuthDutyCode" optional="YES" attributeType="String"/>
+        <attribute name="instructor" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="instruments" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="instrumentsSim" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="night" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="nvg" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="other" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="primary" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="reserveStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="secondary" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="crewLine" inverseEntity="Person"/>
+        <relationship name="sortie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sortie" inverseName="crewLines" inverseEntity="Sortie"/>
+    </entity>
+    <entity name="Mission" representedClassName="Mission" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="mds" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="summary" optional="YES" attributeType="String"/>
+        <relationship name="sorties" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Sortie" inverseName="mission" inverseEntity="Sortie"/>
+    </entity>
+    <entity name="Person" representedClassName="Person" syncable="YES" codeGenerationType="class">
+        <attribute name="firstName" optional="YES" attributeType="String"/>
+        <attribute name="last4" optional="YES" attributeType="String"/>
+        <attribute name="lastName" optional="YES" attributeType="String"/>
+        <attribute name="organization" optional="YES" attributeType="String"/>
+        <attribute name="rank" optional="YES" attributeType="String"/>
+        <relationship name="crewLine" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CrewLine" inverseName="person" inverseEntity="CrewLine"/>
+    </entity>
+    <entity name="Sortie" representedClassName="Sortie" syncable="YES" codeGenerationType="class">
+        <attribute name="arriveICAO" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="arriveTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="departICAO" optional="YES" attributeType="String"/>
+        <attribute name="departTime" optional="YES" attributeType="String"/>
+        <attribute name="harmLocation" optional="YES" attributeType="String"/>
+        <attribute name="serialNumber" optional="YES" attributeType="String"/>
+        <attribute name="unitCharged" optional="YES" attributeType="String"/>
+        <relationship name="crewLines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CrewLine" inverseName="sortie" inverseEntity="CrewLine"/>
+        <relationship name="mission" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Mission" inverseName="sorties" inverseEntity="Mission"/>
+    </entity>
+    <elements>
+        <element name="Mission" positionX="-931.78125" positionY="-357.02734375" width="128" height="118"/>
+        <element name="Sortie" positionX="-718.3203125" positionY="-417.1171875" width="128" height="178"/>
+        <element name="Person" positionX="-259.90625" positionY="-402.19140625" width="128" height="133"/>
+        <element name="CrewLine" positionX="-488.140625" positionY="-552.21875" width="128" height="298"/>
+    </elements>
 </model>
