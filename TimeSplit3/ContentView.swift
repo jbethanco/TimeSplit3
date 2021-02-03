@@ -10,19 +10,10 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         
-        NavigationView {
-            VStack{
-                NavigationLink("Linked scrolls 1", destination: LinkedScrollers())
-                    .padding()
-                
-                NavigationLink("Linked scrolls 2", destination: LinkedScrollers2())
-                    .padding()
-                
-            }.padding()
+        ScrollDemo()
            
-        }
-         
     }
+         
 }
 
 struct ContentView_Previews: PreviewProvider {

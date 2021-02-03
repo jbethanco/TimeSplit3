@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131C3EF925CB21B900A2BD2B /* StepperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131C3EF525CB21B900A2BD2B /* StepperView.swift */; };
+		131C3EFA25CB21B900A2BD2B /* StackBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131C3EF625CB21B900A2BD2B /* StackBuilder.swift */; };
+		131C3EFB25CB21B900A2BD2B /* ScrollDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131C3EF725CB21B900A2BD2B /* ScrollDemo.swift */; };
+		131C3EFC25CB21B900A2BD2B /* Cell_label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131C3EF825CB21B900A2BD2B /* Cell_label.swift */; };
+		131C3F0125CB29CA00A2BD2B /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131C3F0025CB29CA00A2BD2B /* Color+Ext.swift */; };
+		131C3F0625CB335500A2BD2B /* EventID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131C3F0525CB335500A2BD2B /* EventID.swift */; };
 		BF0ACE7225C909000052D1AA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0ACE7125C909000052D1AA /* ContentView.swift */; };
 		BF0ACE7A25C927600052D1AA /* LinkedScrollers2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0ACE7925C927600052D1AA /* LinkedScrollers2.swift */; };
 		BF0ACE8B25C9346C0052D1AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF0ACE8A25C9346C0052D1AA /* Assets.xcassets */; };
@@ -40,6 +46,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		131C3EF525CB21B900A2BD2B /* StepperView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepperView.swift; sourceTree = "<group>"; };
+		131C3EF625CB21B900A2BD2B /* StackBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackBuilder.swift; sourceTree = "<group>"; };
+		131C3EF725CB21B900A2BD2B /* ScrollDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollDemo.swift; sourceTree = "<group>"; };
+		131C3EF825CB21B900A2BD2B /* Cell_label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell_label.swift; sourceTree = "<group>"; };
+		131C3F0025CB29CA00A2BD2B /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		131C3F0525CB335500A2BD2B /* EventID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventID.swift; sourceTree = "<group>"; };
 		BF0ACE7125C909000052D1AA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BF0ACE7925C927600052D1AA /* LinkedScrollers2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedScrollers2.swift; sourceTree = "<group>"; };
 		BF0ACE8A25C9346C0052D1AA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -114,6 +126,10 @@
 				BF0ACE7125C909000052D1AA /* ContentView.swift */,
 				BFCA33F525C89166007215C7 /* LinkedScrollers.swift */,
 				BF0ACE7925C927600052D1AA /* LinkedScrollers2.swift */,
+				131C3EF825CB21B900A2BD2B /* Cell_label.swift */,
+				131C3EF725CB21B900A2BD2B /* ScrollDemo.swift */,
+				131C3EF625CB21B900A2BD2B /* StackBuilder.swift */,
+				131C3EF525CB21B900A2BD2B /* StepperView.swift */,
 				BF41420D25C3AB200005FFA1 /* TempTestView.swift */,
 				BFCA33F025C7B1AC007215C7 /* TrainingEvents.swift */,
 				BF41421725C3AB210005FFA1 /* LaunchScreen.storyboard */,
@@ -121,6 +137,8 @@
 				BF41420F25C3AB200005FFA1 /* TimeSplit3.xcdatamodeld */,
 				BF0ACE8A25C9346C0052D1AA /* Assets.xcassets */,
 				BF41421425C3AB210005FFA1 /* Preview Content */,
+				131C3F0025CB29CA00A2BD2B /* Color+Ext.swift */,
+				131C3F0525CB335500A2BD2B /* EventID.swift */,
 			);
 			path = TimeSplit3;
 			sourceTree = "<group>";
@@ -283,9 +301,15 @@
 			files = (
 				BF41420A25C3AB200005FFA1 /* AppDelegate.swift in Sources */,
 				BF41421125C3AB200005FFA1 /* TimeSplit3.xcdatamodeld in Sources */,
+				131C3EFC25CB21B900A2BD2B /* Cell_label.swift in Sources */,
 				BF0ACE7225C909000052D1AA /* ContentView.swift in Sources */,
+				131C3F0125CB29CA00A2BD2B /* Color+Ext.swift in Sources */,
 				BF0ACE7A25C927600052D1AA /* LinkedScrollers2.swift in Sources */,
+				131C3EFB25CB21B900A2BD2B /* ScrollDemo.swift in Sources */,
+				131C3EF925CB21B900A2BD2B /* StepperView.swift in Sources */,
 				BFCA33F625C89166007215C7 /* LinkedScrollers.swift in Sources */,
+				131C3F0625CB335500A2BD2B /* EventID.swift in Sources */,
+				131C3EFA25CB21B900A2BD2B /* StackBuilder.swift in Sources */,
 				BFCA33F125C7B1AC007215C7 /* TrainingEvents.swift in Sources */,
 				BF41420C25C3AB200005FFA1 /* SceneDelegate.swift in Sources */,
 				BF41420E25C3AB200005FFA1 /* TempTestView.swift in Sources */,

@@ -148,22 +148,22 @@ struct LinkedScrollers_Previews: PreviewProvider {
         LinkedScrollers()
     }
 }
-struct StepperView: View {
-    var name: String
-    @State var value = 0
-    var body: some View {
-        HStack{
-            //Text(name)
-            Stepper("\(name): \(value)", value:$value)
-        }
-    }
-}
-struct StepperView_Previews: PreviewProvider {
-    static var previews: some View {
-        StepperView(name:"test")
-            .padding()
-    }
-}
+//struct StepperView: View {
+//    var name: String
+//    @State var value = 0
+//    var body: some View {
+//        HStack{
+//            //Text(name)
+//            Stepper("\(name): \(value)", value:$value)
+//        }
+//    }
+//}
+//struct StepperView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        StepperView(name:"test")
+//            .padding()
+//    }
+//}
 struct SwipeView: View {
     var name: String
     @State var count = 0
