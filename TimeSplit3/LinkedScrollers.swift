@@ -50,11 +50,13 @@ struct LinkedScrollers: View {
                                         .font(.largeTitle)
                                         .frame(width: 200, height: 111)
                                         .background(Color.blue)
+                                    
                                 }
                             }
                         }.content.offset(y: yOffset)
                         .frame(width:210, height: 800)
                         .background(Color.pink)
+                        .border(Color.black)
                         
                         ScrollView([.horizontal,.vertical]){
                             VStack(spacing: 20) {
