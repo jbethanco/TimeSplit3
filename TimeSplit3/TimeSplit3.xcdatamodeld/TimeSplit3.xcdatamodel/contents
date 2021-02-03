@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20C69" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D64" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="CrewLine" representedClassName="CrewLine" syncable="YES" codeGenerationType="class">
         <attribute name="combatSortie" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="combatSupportSortie" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
@@ -17,7 +17,7 @@
         <attribute name="reserveStatus" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="secondary" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <relationship name="events" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EventRecord" inverseName="crewLine" inverseEntity="EventRecord"/>
-        <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Person" inverseName="crewLine" inverseEntity="Person"/>
+        <relationship name="person" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PBLPerson" inverseName="crewLines" inverseEntity="PBLPerson"/>
         <relationship name="sortie" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sortie" inverseName="crewLines" inverseEntity="Sortie"/>
     </entity>
     <entity name="EventRecord" representedClassName="EventRecord" syncable="YES" codeGenerationType="class">
@@ -38,13 +38,13 @@
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
-    <entity name="Person" representedClassName="Person" syncable="YES" codeGenerationType="class">
+    <entity name="PBLPerson" representedClassName="PBLPerson" syncable="YES" codeGenerationType="class">
         <attribute name="firstName" optional="YES" attributeType="String"/>
         <attribute name="last4" optional="YES" attributeType="String"/>
         <attribute name="lastName" optional="YES" attributeType="String"/>
         <attribute name="organization" optional="YES" attributeType="String"/>
         <attribute name="rank" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <relationship name="crewLine" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CrewLine" inverseName="person" inverseEntity="CrewLine"/>
+        <relationship name="crewLines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CrewLine" inverseName="person" inverseEntity="CrewLine"/>
     </entity>
     <entity name="Sortie" representedClassName="Sortie" syncable="YES" codeGenerationType="class">
         <attribute name="airdropWeight" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
@@ -89,7 +89,7 @@
         <element name="EventRecord" positionX="-324.66796875" positionY="-645.6875" width="128" height="103"/>
         <element name="Mission" positionX="-872.69140625" positionY="-465.76171875" width="128" height="103"/>
         <element name="MissionEvents" positionX="-173.60546875" positionY="-676.9140625" width="128" height="103"/>
-        <element name="Person" positionX="-326.109375" positionY="-513.11328125" width="179.94921875" height="133"/>
+        <element name="PBLPerson" positionX="-326.109375" positionY="-513.11328125" width="179.94921875" height="119"/>
         <element name="Sortie" positionX="-697.76953125" positionY="-945.53515625" width="128" height="583"/>
     </elements>
 </model>
