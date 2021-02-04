@@ -25,9 +25,9 @@ struct ScrollDemo: View {
                     // Header bar
                     
                     ScrollView(.horizontal) {
-                        HStack(spacing: 0) {
+                        HStack(spacing: 50) {
                             ForEach(0..<numberOfPersonnel) {
-                                Cell_label(text: "Person \($0)", color: Color.black)
+                                Cell_label(text: "Person \($0)", color: Color.black, alignment: "center")
                             }
                         }
                     }
@@ -45,6 +45,15 @@ struct ScrollDemo: View {
                         }
                         .content.offset(y: yOffset)
                         .frame(width: 200, height: 500)
+                        
+                        ScrollView(.vertical){
+                            VStack {
+                                EventTitles()
+                            }
+                        }
+                        .content.offset(y: yOffset)
+                        .frame(width: 200, height: 500)
+                        
                         ScrollView([.horizontal, .vertical]){
                             VStack {
                                 Color.blue.frame(width: 2, height: 2)
@@ -69,13 +78,21 @@ struct ScrollDemo: View {
                         }
                     }
                 .frame(width: geometry.size.width, height: geometry.size.height)
+                
+                Color.white
+                    .frame(width:400,height: 80)
+                    .ignoresSafeArea()
+//                    .shadow(color: .white, radius: 30, x: 10, y: -10)
+                    Text("Training Events")
+                        .font(.headline)
+                        .frame(width: 400, height: 50, alignment: .leading)
                 }
             }
         }
     
     func offsetChanged(point: CGPoint) {
-        yOffset = point.y
-        xOffset = point.x - 185
+        yOffset = point.y - 53
+        xOffset = point.x - 250
         print(point)
     }
 }

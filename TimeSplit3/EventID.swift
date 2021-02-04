@@ -16,11 +16,17 @@ struct EventID: View {
                      TrainingID(item: "TWO1Y"), TrainingID(item: "TW5OY"), TrainingID(item: "TW2OY"),
                      TrainingID(item: "AN21Y")]
     var body: some View {
-        VStack(spacing: 5) {
-            Cell_label(text: "Event ID", color: Color.gray)
+        VStack(spacing: 0) {
+            Divider()
+            Cell_label(text: "Event ID", color: Color.gray, alignment: "center")
+            Divider()
+                .padding(.bottom, 12)
             ForEach(sampleIDs, id:\.id) { item in
-                Cell_label(text: item.item, color: Color.black)
+                Cell_label(text: item.item, color: Color.black, alignment: "center")
+                
+                Divider()
             }
+            .frame(width: 200, height: 26, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
         }
     }
 }
@@ -32,7 +38,3 @@ struct EventID_Previews: PreviewProvider {
 }
 
 
-struct TrainingID: Identifiable {
-    var id = UUID()
-    var item: String
-}

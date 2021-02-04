@@ -17,14 +17,14 @@ struct StepperView: View {
                 //Text(name)
                 Stepper("\(value)", value:$value)
             }
-            .frame(width: 175, height: 50)
+            .frame(width: 175, height: 51)
             .background(Color.gray)
         }else{
             HStack{
                 //Text(name)
                 Stepper("  \(value)", value:$value)
             }
-            .frame(width: 175, height: 50)
+            .frame(width: 175, height: 51)
             .background(Color.lightGray)
         }
         
