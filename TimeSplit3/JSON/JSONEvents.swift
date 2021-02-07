@@ -85,7 +85,7 @@ extension Element {
 //
 //   let task = URLSession.shared.eventTask(with: url) { event, response, error in
 //     if let event = event {
-//       ...
+//       // we have the event object
 //     }
 //   }
 //   task.resume()
